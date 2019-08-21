@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "spec-version": "1.5"
+  },
+  "display-name" : "BQ Drop Table",
+  "configuration-groups": [
+    {
+      "label": "Basic",
+      "properties": [
+        {
+          "widget-type": "textbox",
+          "label": "Dataset",
+          "name": "dataset",
+          "widget-attributes" : {
+            "placeholder": "Dataset the table belongs to"
+          }
+        },
+        {
+          "widget-type": "textbox",
+          "label": "Table",
+          "name": "table",
+          "widget-attributes" : {
+            "placeholder": "Name of the table to drop"
+          }
+        }
+      ]
+    },
+    {
+      "label" : "Advanced",
+      "properties" : [
+        {
+          "widget-type": "textbox",
+          "label": "Project Id",
+          "name": "project",
+          "widget-attributes" : {
+            "default": "auto-detect"
+          }
+        },
+        {
+          "widget-type": "textbox",
+          "label": "Dataset Project Id",
+          "name": "datasetProject",
+          "widget-attributes" : {
+            "placeholder": "Project the dataset belongs to, if different from the Project Id."
+          }
+        },
+        {
+          "widget-type": "radio-group",
+          "label": "Drop Mode",
+          "name": "dropOnlyIfExists",
+          "widget-attributes": {
+            "layout": "inline",
+            "default": "true",
+            "options": [
+              {
+                "id": "true",
+                "label": "Drop if exists"
+              },
+              {
+                "id": "false",
+                "label": "Drop always"
+              }
+            ]
+          }
+        },
+        {
+          "widget-type": "textbox",
+          "label": "Service Account File Path",
+          "name": "serviceFilePath",
+          "widget-attributes" : {
+            "default": "auto-detect"
+          }
+        }
+      ]
+    }
+  ],
+  "outputs": []
+}
